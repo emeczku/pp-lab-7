@@ -28,13 +28,13 @@ public class Main extends Application {
 
         Button searchButton = new Button("Search");
 
-        HBox hBox = new HBox(15);
+        HBox hBox = new HBox(10);
         hBox.getChildren().addAll(directoryPathField, browseButton);
 
-        VBox vBox = new VBox(15);
+        VBox vBox = new VBox(10);
         vBox.getChildren().addAll(hBox, searchField, searchButton);
 
-        Scene scene = new Scene(vBox, 700, 300);
+        Scene scene = new Scene(vBox, 600, 200);
         primaryStage.setScene(scene);
 
         primaryStage.show();
