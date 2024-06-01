@@ -12,6 +12,7 @@ public class Main extends Application {
 
     private TextField directoryPathField;
     private TextField searchField;
+    private TextArea resultArea;
 
     @Override
     public void start(Stage primaryStage) {
@@ -28,11 +29,17 @@ public class Main extends Application {
 
         Button searchButton = new Button("Search");
 
+        resultArea = new TextArea();
+        resultArea.setPrefHeight(400);
+
         HBox hBox = new HBox(15);
         hBox.getChildren().addAll(directoryPathField, browseButton);
 
         VBox vBox = new VBox(15);
         vBox.getChildren().addAll(hBox, searchField, searchButton);
+
+        VBox vBox = new VBox(10);
+        vBox.getChildren().addAll(hBox, searchField, searchButton, resultArea);
 
         Scene scene = new Scene(vBox, 700, 300);
         primaryStage.setScene(scene);
