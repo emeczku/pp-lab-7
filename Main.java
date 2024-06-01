@@ -47,7 +47,6 @@ public class Main extends Application {
     }
 
     private void browseDirectory() {
-        // Tworzenie obiektu DirectoryChooser
         DirectoryChooser directoryChooser = new DirectoryChooser();
 
         File selectedDirectory = directoryChooser.showDialog(null);
